@@ -9,9 +9,9 @@
 
 # リファレンス
 Arduino上でのプログラミングをするにあたって、参考となる情報源を集めました。
-- [Let's Make With Arduino!](https://lets.makewitharduino.com/)
+- [Let's Make With Arduino!](https://lets.makewitharduino.com/)  
 Arduinoを使った電子工作とプログラミングのための情報サイト。ビジュアルプログラミングツール「BlocklyDuino」を公開しています。
-- [岡田のQiitaアカウント](http://qiita.com/okhiroyuki)
+- [岡田のQiitaアカウント](http://qiita.com/okhiroyuki)  
 Qiitaに記事を掲載しています。Arduino関連以外のものもありますので、ご覧ください。
  - [Linino Oneをはじめよう！](http://qiita.com/okhiroyuki/items/f6ed9a78a41612e8ec08)
  - [Linino Oneのファームアップデート](http://qiita.com/okhiroyuki/items/048d2c91bea5fa200be6)
