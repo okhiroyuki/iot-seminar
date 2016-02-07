@@ -13,7 +13,7 @@ Arduino上でのプログラミングをするにあたって、参考となる�
 Arduinoを使った電子工作とプログラミングのための情報サイト。ビジュアルプログラミングツール「BlocklyDuino」を公開しています。
 - [岡田のQiitaアカウント](http://qiita.com/okhiroyuki)  
 Qiitaに記事を掲載しています。Arduino関連以外のものもありますので、ご覧ください。
- - [Linino Oneをはじめよう！](http://qiita.com/okhiroyuki/items/f6ed9a78a41612e8ec08)
+ - [Linino Oneをはじめよう！](http://qiita.com/okhiroyuki/items/9c024c6db93a639ee788)
  - [Linino Oneのファームアップデート](http://qiita.com/okhiroyuki/items/048d2c91bea5fa200be6)
  - [Arduino専用ビジュアルエディタBlocklyDuinoの使い方](http://qiita.com/okhiroyuki/items/f6ed9a78a41612e8ec08)
 
