@@ -7,6 +7,14 @@
 - M2XPost：M2Xへ温度データをアップロードする。
 - M2XPostLoop：M2Xへの温度データを定期的にアップデートさせる。
 
+# 必要なライブラリ
+- [M2X-Arduino](https://github.com/attm2x/m2x-arduino/releases)
+- [jsonlite](https://github.com/amamchur/jsonlite/releases)
+- [Blynk-Library](https://github.com/blynkkk/blynk-library/releases)
+
+## jsonlite
+jsonliteは、\amalgamated\jsonliteをlibrariesフォルダに配置すればよい。
+
 # リファレンス
 Arduino上でのプログラミングをするにあたって、参考となる情報源を集めました。
 - [Let's Make With Arduino!](https://lets.makewitharduino.com/)  
