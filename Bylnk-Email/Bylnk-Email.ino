@@ -24,31 +24,28 @@
  * WARNING: You are limited to send ONLY ONE E-MAIL PER MINUTE!
  *
  **************************************************************/
-//#define BLYNK_DEBUG
 #define BLYNK_PRINT Serial
 #include <Bridge.h>
 #include <BlynkSimpleYun.h>
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-//char auth[] = "YourAuthToken";
-char auth[] = "581bb3e9b9cf4cbc85b5d724e8a2a29d";
+char auth[] = "YourAuthToken";
 
 int flg = 0;
 
 void setup()
 {
   Serial.begin(9600);
+  // Wait for the Serial port to connect
+  while(!Serial);
+  
   Blynk.begin(auth);
 
   while (Blynk.connect() == false) {
     // Wait until connected
   }
   
-  // Send e-mail when your hardware gets connected to Blynk Server
-  // Just put the recepient's "e-mail address", "Subject" and the "message body"
-  //Blynk.email("ok.okada.hiroyuki@gmail.com", "Subject", "My Blynk project is online."); 
-
   // Setting the button
   pinMode(3, INPUT_PULLUP);
   // Attach pin 3 interrupt to our handler
@@ -77,7 +74,7 @@ void loop()
 {
   Blynk.run();
   if(flg == 1){
-    Blynk.email("ok.okada.hiroyuki@gmail.com", "Subject: Button Logger", "You just pushed the button...");
+    Blynk.email("<your email>", "Subject: Button Logger", "You just pushed the button...");
     delay(1000);
     flg = 0;
   }
