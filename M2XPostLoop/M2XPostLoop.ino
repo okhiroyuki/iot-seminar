@@ -1,8 +1,9 @@
-#include <jsonlite.h>
 #include <Console.h>
 #include <YunClient.h>
-#include "M2XStreamClient.h"
 #include "DHT.h"
+
+#define ARDUINO_PLATFORM
+#include "M2XStreamClient.h"
 
 #define DHTPIN 2     // what digital pin we're connected to
 #define DHTTYPE DHT11   // DHT 11
@@ -24,8 +25,6 @@ void setup() {
   // Wait for the Serial port to connect
   while(!Serial);
 
-  Serial.println("type T to push temperature data to m2x");
-  
   dht.begin();
 }
 

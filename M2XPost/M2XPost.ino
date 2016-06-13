@@ -1,16 +1,20 @@
-#include <jsonlite.h>
 #include <Console.h>
 #include <YunClient.h>
-#include "M2XStreamClient.h"
 #include "DHT.h"
+
+#define ARDUINO_PLATFORM
+#include "M2XStreamClient.h"
 
 #define DHTPIN 2     // what digital pin we're connected to
 #define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
 
-char deviceId[] = "<device id>"; // Device you want to push to
-char streamName[] = "<stream name>"; // Stream you want to push to
-char m2xKey[] = "<M2X access key>"; // Your M2X access key
+//char deviceId[] = "<device id>"; // Device you want to push to
+//char streamName[] = "<stream name>"; // Stream you want to push to
+//char m2xKey[] = "<M2X access key>"; // Your M2X access key
+char deviceId[] = "2355226df8b5fa5ddbe1b78b43e0addc"; // Device you want to push to
+char streamName[] = "temp"; // Stream you want to push to
+char m2xKey[] = "43dedb98079a70f7878c7fff80bc0fad"; // Your M2X access key
 
 char incomingByte;      // a variable to read incoming Console data into
 
