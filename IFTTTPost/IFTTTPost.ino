@@ -1,19 +1,6 @@
-/*
-  Running process using Process class.
-
- This sketch demonstrate how to run linux processes
- using an Arduino Yún.
-
- created 5 Jun 2013
- by Cristian Maglie
-
- This example code is in the public domain.
-
- http://www.arduino.cc/en/Tutorial/Process
-
- */
-
 #include <Process.h>
+
+char incomingByte; 
 
 void setup() {
   // Initialize Bridge
@@ -24,25 +11,27 @@ void setup() {
 
   // Wait until a Serial Monitor is connected.
   while (!Serial);
-
-  pinMode(3,INPUT_PULLUP);
+  
+  Serial.println("type E to send Email"); 
 }
 
 void loop() {
   // Do nothing here.
-  if(digitalRead(3) == LOW){
-    runCurl();
-    delay(1000);
+  if (Serial.available() > 0) {
+    incomingByte = Serial.read();
+    Serial.println(incomingByte);
+    if (incomingByte == 'E') {
+      runCurl();
+      delay(1000);
+    }
   }
 }
 
 void runCurl() {
-  // Launch "curl" command and get Arduino ascii art logo from the network
-  // curl is command line program for transferring data using different internet protocols
-  Process p;		// Create a process and call it "p"
-  p.begin("curl");	// Process that launch the "curl" command
-  p.addParameter("<ifttt url>"); // Add the URL parameter to "curl"
-  p.run();		// Run the process and wait for its termination
+  Process p;
+  p.begin("curl");
+  p.addParameter("http://maker.ifttt.com/trigger/button_pressed/with/key/{key}?value1={value1}&value2={value2}&value3={value3}");
+  p.run();
 
   // Print arduino logo over the Serial
   // A process output can be read with the stream methods
